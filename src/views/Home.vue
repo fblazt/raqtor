@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen flex flex-col justify-evenly">
-    <AppTitle></AppTitle>
+    <AppTitle title="Raqtor"></AppTitle>
     <AppHome></AppHome>
   </div>
 </template>

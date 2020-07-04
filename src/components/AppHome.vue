@@ -3,7 +3,9 @@
     <AppLogo></AppLogo>
     <div class="flex flex-row justify-center items-center">
       <button class="m-1 px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600">Random Quote</button>
-      <button class="m-1 px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600">Custom Quote</button>
+      <button >
+        <router-link to="/custom" class="m-1 px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600">Custom Quote</router-link>
+      </button>
     </div>
   </div>
 </template>
