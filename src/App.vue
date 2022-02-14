@@ -1,9 +1,5 @@
 <template>
   <div class="h-full w-full bg-blue-900">
-    <!-- <div>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
     <router-view/>
   </div>
 </template>
