@@ -1,27 +1,19 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '@/views/Home.vue'
-import CustomQuote from '@/views/CustomQuote.vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
-Vue.use(VueRouter)
-
-  const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/custom',
-    name: 'CustomQuote',
-    component: CustomQuote
-  }
-]
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+export const router = createRouter({
+  history: createWebHashHistory(),
+  routes: [
+    {
+      name: 'Home',
+      path: '/',
+      component: () => import('@/views/Home.vue')
+    },
+    {
+      name: 'custom-quote',
+      path: '/custom',
+      component: () => import('@/views/CustomQuote.vue')
+    }
+  ]
 })
 
-export default router
+export const routerPush = name => router.push({ name })
